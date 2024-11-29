@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h3 {
+            background-color: #eee;
+            padding: 10px;
+            margin: 0;
+            border-radius: 4px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="number"], input[type="file"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .file-input {
+            display: flex;
+            align-items: center;
+        }
+        .file-input input[type="file"] {
+            padding: 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #5c6bc0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #3f51b5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Vendor Registration Form</h2>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <!-- GST Information -->
+        <div class="section">
+            <h3>GST Information</h3>
+            <label for="gst-number">GST Number*</label>
+            <input type="text" id="gst-number" name="gst_number" required>
+
+            <label for="gst-upload">Upload GST (jpeg/jpg/png/gif/pdf)*</label>
+            <div class="file-input">
+                <input type="file" id="gst-upload" name="gst_upload" accept=".jpeg, .jpg, .png, .gif, .pdf" required>
+            </div>
+        </div>
+
+        <!-- PAN Information -->
+        <div class="section">
+            <h3>PAN Information</h3>
+            <label for="pan-number">PAN Number*</label>
+            <input type="text" id="pan-number" name="pan_number" required>
+
+            <label for="pan-upload">Upload PAN (jpeg/jpg/png/gif/pdf)*</label>
+            <div class="file-input">
+                <input type="file" id="pan-upload" name="pan_upload" accept=".jpeg, .jpg, .png, .gif, .pdf" required>
+            </div>
+        </div>
+
+        <!-- Aadhar Information -->
+        <div class="section">
+            <h3>Aadhar (UIDAI) Information</h3>
+            <label for="aadhar-number">Aadhar Number</label>
+            <input type="text" id="aadhar-number" name="aadhar_number">
+
+            <label for="aadhar-upload">Upload Aadhar (jpeg/jpg/png/gif/pdf)</label>
+            <div class="file-input">
+                <input type="file" id="aadhar-upload" name="aadhar_upload" accept=".jpeg, .jpg, .png, .gif, .pdf">
+            </div>
+        </div>
+
+        <!-- UDYAM/MSME Information -->
+        <div class="section">
+            <h3>UDYAM/MSME Information</h3>
+            <label for="udyam-number">UDYAM/MSME Number</label>
+            <input type="text" id="udyam-number" name="udyam_number">
+
+            <label for="udyam-upload">Upload UDYAM/MSME (jpeg/jpg/png/gif/pdf)</label>
+            <div class="file-input">
+                <input type="file" id="udyam-upload" name="udyam_upload" accept=".jpeg, .jpg, .png, .gif, .pdf">
+            </div>
+        </div>
+
+        <!-- Registered Entity Details -->
+        <div class="section">
+            <h3>Registered Entity Details</h3>
+            <label for="entity-name">Registered Entity Name*</label>
+            <input type="text" id="entity-name" name="entity_name" required>
+
+            <label for="address">Place of Business/Address*</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">City*</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State*</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="pin-code">PIN Code*</label>
+            <input type="number" id="pin-code" name="pin_code" required>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="section">
+            <h3>Contact Information</h3>
+            <label for="phone">Phone Number*</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website">
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <h3>Certifications Obtained</h3>
+            <label for="certifications">Upload Certifications (jpeg/jpg/png/gif/pdf)</label>
+            <div class="file-input">
+                <input type="file" id="certifications" name="certifications" accept=".jpeg, .jpg, .png, .gif, .pdf">
+            </div>
+        </div>
+
+        <!-- Company Details -->
+        <div class="section">
+            <h3>Company Details</h3>
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" name="company_name">
+
+            <label for="turnover">Last Year Turnover (₹ in Crore)*</label>
+            <input type="number" id="turnover" name="turnover" required>
+        </div>
+
+        <!-- Bank Details -->
+        <div class="section">
+            <h3>Bank Details</h3>
+            <label for="bank-name">Bank Name*</label>
+            <input type="text" id="bank-name" name="bank_name" required>
+
+            <label for="ifsc">IFSC Code*</label>
+            <input type="text" id="ifsc" name="ifsc_code" required>
+
+            <label for="account-holder">Account Holder Name*</label>
+            <input type="text" id="account-holder" name="account_holder" required>
+
+            <label for="account-number">Account Number*</label>
+            <input type="number" id="account-number" name="account_number" required>
+
+            <label for="cancel-cheque">Upload Cancel Cheque/Account Details (jpeg/jpg/png/gif/pdf)</label>
+            <div class="file-input">
+                <input type="file" id="cancel-cheque" name="cancel_cheque" accept=".jpeg, .jpg, .png, .gif, .pdf">
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="section">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
